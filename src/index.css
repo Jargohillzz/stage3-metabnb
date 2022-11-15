@@ -1,13 +1,587 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@700&family=Red+Rose:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  line-height: 1.3em;
+  font-family: "Red Rose", cursive;
+}
+.no-scroll {
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+/* navbar */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+.navbar {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.btn-toggle {
+  border: none;
+  cursor: pointer;
+}
+.bars {
+  font-size: 30px;
+  background-color: white;
+  transition: 0.5s ease-in;
+}
+.bars:hover {
+  transform: scale(1.2);
+}
+
+.linkss {
+  height: 0;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.links {
+  margin-top: 10px;
+}
+.links li {
+  list-style: none;
+}
+.show-links {
+  background-color: white;
+  height: 250px;
+}
+.link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-bottom: 1px solid #a02279;
+  transition: 0.4s ease;
+  list-style: none;
+}
+.links li:hover {
+  background-color: #a02279;
+}
+.link:hover {
+  color: white;
+  transform: translateX(10px);
+}
+
+.connect-btn {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 1rem 1.6rem;
+  text-transform: capitalize;
+  color: white;
+  background: #a02279;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.connect-btn:hover {
+  background-color: white;
+  color: #a02279;
+  border: 2px solid #a02279;
+  font-size: 1.4rem;
+  padding: 0.6rem 0;
+}
+/* end of navbar */
+
+/* hero */
+.hero-text h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-top: 20px;
+  /* font-size: 56px; */
+  color: #434343;
+}
+.hero-text h1 strong {
+  font-weight: 700;
+  color: #a02279;
+}
+.hero-text p {
+  line-height: 3rem;
+  font-size: 24px;
+}
+.hero-form {
+  margin: 1rem 0;
+  display: flex;
+  width: 100%;
+}
+.hero-form button {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 1rem 1.6rem;
+  text-transform: capitalize;
+  color: white;
+  background: #a02279;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  max-width: 230px;
+  min-width: 100px;
+  flex: 1;
+}
+.hero-form input {
+  flex: 4;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #a3a3a3;
+  padding: 10px;
+  min-width: 150px;
+}
+.hero-images {
+  margin: 2rem 0;
+  display: flex;
+  gap: 5px;
+}
+.hero-images-left,
+.hero-images-right {
+  width: calc(50% - 2.5px);
+}
+.hero-images-left {
+  margin-top: 5rem;
+}
+.img img {
+  object-fit: contain;
+  width: 100%;
+}
+/* end of hero */
+/* sponsor */
+.sponsor {
+  background-color: #a02279;
+}
+.sponsor-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+.spons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 33%;
+}
+.spons > span {
+  margin-left: 0.2rem;
+}
+.spons img {
+  width: 24px;
+}
+.spons .metaa {
+  width: 90px;
+  transform: translateY(2px);
+}
+.spons-mb {
+  font-family: "inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.spons-opensea {
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+/* end of sponsor */
+
+/* adv list */
+.adv-text {
+  text-align: center;
+  padding-top: 2rem;
+}
+.adv-lists-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.adv-list {
+  border: 1px solid #d7d7d7;
+  border-radius: 15px;
+  padding: 1rem;
+  max-width: 18.25rem;
+  margin: 2rem 2rem;
+}
+.adv-list > img {
+  width: 100%;
+}
+.card-text-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.card-text-flex h3 {
+  font-weight: 400;
+  padding-top: 10px;
+  font-size: 0.75rem;
+}
+.card-text-flex .bold {
+  font-weight: 700;
+}
+.card-stars {
+  padding-top: 10px;
+}
+.card-stars img {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* nft section */
+.nft-container {
+  background-color: #a02279;
+  color: white;
+}
+.nft {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nft-text h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.nft-text p {
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+.nft-btn {
+  font-size: 1rem;
+  text-align: center;
+  background-color: white;
+  border: none;
+  color: #a02279;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+.nft-img {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+.nft-img img {
+  width: 100%;
+  object-fit: contain;
+}
+/* end of nft */
+/* footer */
+.footer-container {
+  background-color: #1d1d1e;
+  color: white;
+  padding-top: 2rem;
+}
+.footer-left {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+.footer-logo img {
+}
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+.footer-logo .logo-house {
+  width: 30px;
+}
+.footer-logo .logo-metabnb {
+  width: 120px;
+  margin-left: 10px;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-tab {
+  margin-top: 1rem;
+}
+.footer-tab > h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.footer-tab > p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.footer-container > h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+/* modal */
+.modal {
+  margin: 1rem 0;
+}
+.modal-connect {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #cfd8dc;
+}
+.modal-connect > h2 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.modal-connect .close-btn {
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal-wallet {
+  width: 90%;
+  margin: 1rem auto 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #434343;
+  border-radius: 12px;
+}
+.modal-wallet > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 5px 0;
+}
+.modal-wallet h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.modal > h3 {
+  font-size: 1rem;
+  margin: 2rem auto;
+  width: 90%;
+}
+
+/* places */
+.full-place {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+.location-names {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  width: auto;
+}
+.location-names::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+.location-names h4 {
+  min-width: fit-content;
+}
+.location-filter {
+  display: flex;
+  padding: 14px;
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid #b4b4b4;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+.location-filter h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+/* end of places */
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+  .modal-wallet h2 {
+    font-size: 1.5rem;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  .nft-container {
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .container {
+    width: 85%;
+  }
+  .btn-toggle {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .linkss {
+    height: auto !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .links {
+    display: flex;
+    margin-right: 2rem;
+  }
+  .link {
+    border: none;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  .hero {
+    display: flex;
+    gap: 1rem;
+  }
+  .hero-text {
+    width: 50%;
+  }
+  .hero-text h1 {
+    line-height: 1rem;
+    font-size: 2.7rem;
+  }
+  .hero-text p {
+    line-height: 2rem;
+  }
+  .hero-images {
+    width: 50%;
+  }
+  .spons img {
+    width: 40px;
+  }
+  .spons .metaa {
+    width: 10rem;
+  }
+  .spons-mb {
+    font-size: 2.5rem;
+  }
+  .spons-opensea {
+    font-size: 2rem;
+  }
+  .nft {
+    flex-direction: row;
+    gap: 3%;
+  }
+  .nft-text {
+    width: 47%;
+  }
+  .nft-img {
+    width: 50%;
+  }
+  .nft-text h1 {
+    margin-bottom: 2rem;
+  }
+  .nft-text p {
+    line-height: 35px;
+    margin-bottom: 1.5rem;
+  }
+  .footer-container {
+    padding-top: 4rem;
+  }
+  .footer {
+    display: flex;
+    gap: 10%;
+  }
+  .footer-left {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .footer-right {
+    flex: 1;
+    justify-content: space-between;
+    margin-right: 20px;
+  }
+  .footer-social {
+    transform: translateY(-1rem);
+    gap: 2rem;
+  }
+  .footer-logo .logo-house {
+    width: fit-content;
+  }
+  .footer-logo .logo-metabnb {
+    width: fit-content;
+  }
+  .footer-container > h4 {
+    width: 85%;
+    margin: 0 auto;
+    text-align: start;
+    padding-bottom: 2rem;
+  }
+  .location-names {
+    gap: 1.6rem;
+  }
+  .adv-list {
+    max-width: calc(25% - 4rem);
+  }
+}
+
+@media only screen and (min-width: 1390px) {
+  .links {
+    margin-right: 6rem;
+  }
+  .link {
+    font-size: 1.25rem;
+    margin-right: 3rem;
+  }
+  .hero {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-text h1 {
+    line-height: 3rem;
+    font-size: 3.5rem;
+  }
+  .hero-text p {
+    margin: 3rem 0;
+    line-height: 2rem;
+  }
+  .hero-images {
+    width: 45%;
+  }
+  .nft-text {
+    width: 37%;
+  }
+  .nft-img {
+    width: 60%;
+    max-width: 600px;
+  }
+  .footer {
+    gap: 15%;
+  }
+
+  .footer-right {
+    margin-right: 40px;
+  }
+  .location-names {
+    gap: 3rem;
+  }
 }
