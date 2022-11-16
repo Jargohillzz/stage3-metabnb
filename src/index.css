@@ -241,10 +241,11 @@
 }
 .nft {
   display: flex;
-  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .nft-text h1 {
   font-weight: 700;
@@ -422,9 +423,6 @@
   .hero-text h1 {
     font-size: 3rem;
   }
-  .nft-container {
-    height: 100vh;
-  }
 }
 
 @media only screen and (min-width: 1023px) {
@@ -500,6 +498,8 @@
   .nft {
     flex-direction: row;
     gap: 3%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
   .nft-text {
     width: 47%;
