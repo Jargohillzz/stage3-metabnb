@@ -26,6 +26,9 @@
   margin-top: 20px;
   margin-bottom: 10px;
 }
+.logo-link {
+  transform: scale(0.8) translateX(-25px);
+}
 .btn-toggle {
   border: none;
   cursor: pointer;
@@ -91,8 +94,6 @@
   background-color: white;
   color: #a02279;
   border: 2px solid #a02279;
-  font-size: 1.4rem;
-  padding: 0.6rem 0;
 }
 /* end of navbar */
 
@@ -289,8 +290,6 @@
   display: flex;
   align-items: center;
 }
-.footer-logo img {
-}
 .footer-social {
   display: flex;
   gap: 20px;
@@ -300,7 +299,7 @@
 }
 .footer-logo .logo-metabnb {
   width: 120px;
-  margin-left: 10px;
+  margin-left: 3px;
 }
 
 .footer-right {
@@ -414,6 +413,9 @@
   .container {
     width: 80%;
   }
+  .logo-link {
+    transform: none;
+  }
   .modal-wallet h2 {
     font-size: 1.5rem;
   }
@@ -442,16 +444,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: none;
   }
   .links {
     display: flex;
-    margin-right: 2rem;
+    margin-right: 0;
   }
   .link {
     border: none;
     font-size: 1rem;
     margin-right: 1rem;
   }
+  .links li:hover {
+    background-color: white;
+  }
+  .link:hover {
+    color: #a02279;
+    transform: none;
+  }
+  .connect-btn:hover {
+    background-color: #a02279;
+    color: white;
+    border: none;
+  }
+
   .hero {
     display: flex;
     gap: 1rem;
@@ -539,7 +555,23 @@
   }
 }
 
-@media only screen and (min-width: 1390px) {
+@media only screen and (min-width: 1100px) {
+  .links {
+    margin-right: 4rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .links {
+    margin-right: 7rem;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .links {
+    margin-right: 10rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
   .links {
     margin-right: 6rem;
   }

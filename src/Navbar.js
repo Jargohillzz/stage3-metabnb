@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import logo from "./assets/Vector (1).png";
+import homeLogo from "./assets/Vector.png";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import PopUp from "./PopUp";
@@ -43,7 +44,12 @@ const Navbar = () => {
   return (
     <div className="navbar container">
       <div className="nav-header">
-        <img src={logo} alt="logo" />
+        <div className="logo-link">
+          <Link to="/">
+            <img src={homeLogo} alt="logo" />
+            <img src={logo} alt="logo" />
+          </Link>
+        </div>
         <button className="btn-toggle" onClick={handleToggle}>
           <FontAwesomeIcon icon={faBars} className="bars" />
         </button>
